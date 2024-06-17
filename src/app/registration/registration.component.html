@@ -1,0 +1,78 @@
+<body class="register">
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="container text-center">
+          <img
+            class="img-fluid"
+            style="width: 100px"
+            src="/assets/registration.png"
+          />
+        </div>
+        <h1 class="text-center head">Register here</h1>
+        <form (ngSubmit)="onSubmit()" class="form">
+          <mat-form-field class="full-width" appearance="outline" >
+            <mat-label >FirstName</mat-label>
+            <input
+              [(ngModel)]="credentials1.firstName"
+              name="firstName"
+              type="text"
+              required
+              matInput
+             id="color" style="color: aliceblue;border-color: rgb(255, 255, 255);">
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>LastName</mat-label>
+            <input
+              [(ngModel)]="credentials1.lastName"
+              name="lastName"
+              type="text"
+              required
+              matInput
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              [(ngModel)]="credentials1.email"
+              name="email"
+              type="text"
+              required
+              matInput
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              [(ngModel)]="credentials1.password"
+              name="password"
+              required
+              type="password"
+              matInput
+            />
+          </mat-form-field>
+
+          <div class="container text-center">
+            <button type="submit" mat-raised-button color="primary">
+              Register
+            </button>
+            <button
+              style="margin-left: 20px"
+              type="reset"
+              mat-raised-button
+              color="accent"
+            >
+              Reset
+            </button>
+          </div>
+          <br>
+          <span>Allready have an account <a routerLink="/login">Login</a></span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

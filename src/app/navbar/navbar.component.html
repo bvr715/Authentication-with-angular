@@ -1,0 +1,17 @@
+<!-- <mat-toolbar color="primary">
+<span><a mat-icon-button routerLink="/">LoginApp</a></span>
+<span class="example-spacer"></span>
+<a mat-icon-button routerLink="/login">Login</a>
+</mat-toolbar> -->
+
+
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>manage_accounts</mat-icon>
+  </button>
+  <span><a mat-icon-button routerLink="/">Student Management System</a></span>
+  <span class="example-spacer"></span>
+  <a *ngIf="!loggedIn" mat-icon-button style="margin-right: 100px;" routerLink="/login">Login</a>
+   <button *ngIf="loggedIn"  style="margin-right: 100px;" mat-raised-button color="warn"  (click)="openDialog()">Add Student</button>
+  <a *ngIf="loggedIn" mat-icon-button style="margin-right: 100px;"  (click)="logOutUser()">Logout</a>
+</mat-toolbar>

@@ -1,0 +1,85 @@
+
+<h2 mat-dialog-title>{{formHeader}}</h2>
+
+<div mat-dialog-content>
+  <form (ngSubmit)="addStudent()">
+    <mat-form-field appearance="outline">
+      <mat-label>Student Name</mat-label>
+      <input
+        [(ngModel)]="student.std_name"
+        name="std_name"
+        required
+        matInput
+        placeholder=" Enter youre Name"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Collage Name</mat-label>
+      <input
+        [(ngModel)]="student.clgname"
+        name="clgname"
+        required
+        matInput
+        placeholder=" Enter youre Collage Name"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Qualification</mat-label>
+      <input
+        [(ngModel)]="student.qualification"
+        name="qualification"
+        required
+        matInput
+        placeholder=" Enter Your Qualification"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Mobile Number</mat-label>
+      <input
+        [(ngModel)]="student.mobileNumber"
+        name="mobileNumber"
+        type="number"
+        required
+        matInput
+        placeholder=" Enter Your Mobile Number"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Email</mat-label>
+      <input
+        [(ngModel)]="student.email"
+        name="email"
+        type="email"
+        required
+        matInput
+        placeholder=" Enter Your Email"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Fees</mat-label>
+      <input
+        [(ngModel)]="student.fees"
+        name="fees"
+        type="number"
+        required
+        matInput
+        placeholder=" Enter Your Fees"
+      />
+    </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" type="button" mat-dialog-close>
+    Close
+  </button>
+  <button
+    style="margin-left: 8px"
+    mat-raised-button
+    color="primary"
+    (click)="addStudent()"
+  >
+    {{ actionBtn }}
+  </button>
+</div>
+
